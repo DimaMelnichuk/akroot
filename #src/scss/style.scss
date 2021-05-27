@@ -4,9 +4,9 @@
 
 //<FONTS>===============================================================================================
 //&display=swap&subset=cyrillic-ext
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,regular&display=swap&subset=cyrillic-ext");
 @import "fonts";
-
-//@import "icons";
+@import "icons";
 //</FONTS>=======================================================================================================
 
 //<VARIABLES>===========================================================================================================
@@ -18,8 +18,8 @@ $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
 
-$fontFamily: "Arial";
-$fontSize: 16;
+$fontFamily: "Quicksand";
+$fontSize: 18;
 //</VARIABLES>===========================================================================================================
 
 //<MAIN GRID>===========================================================================================================
@@ -37,6 +37,21 @@ $fontSize: 16;
 		padding: 0 10px;
 	}
 }
+
+._container-full {
+	max-width: 1410px;
+	margin: 0 auto;
+	padding: 0px 90px;
+	@media (max-width: $md2+px) {
+		max-width: 991.98px;
+		padding: 0 15px;
+		max-width: 750px;
+	}
+	@media (max-width: $md3+px) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
 //</MAIN GRID>===========================================================================================================
 
 //<LIBS>====================================================================================================
@@ -44,7 +59,7 @@ $fontSize: 16;
 //<LIBS>====================================================================================================
 
 //<COMPONENTS>====================================================================================================
-@import "components/select";
+@import "components/swiper";
 @import "components/popup";
 //<COMPONENTS>====================================================================================================
 
@@ -54,11 +69,19 @@ $fontSize: 16;
 @import "header";
 @import "footer";
 @import "home";
+
+//pages
+@import "pages/homepage-v5";
+
+//blocks
+@import "blocks/copyright";
+@import "blocks/socials";
 //</STYLES>====================================================================================================
 
 //<NULL, GENERAL PARAMETERS>===============================================================================================
 @import "null";
 body {
+	
 	color: #000;
 	font-size: 14px;
 	&._lock {
@@ -75,6 +98,24 @@ body {
 	display: flex;
 	flex-direction: column;
 	&._loaded {
+		.page__pagination {
+			opacity: 1;
+			visibility: visible;
+			transform: translate(0px, -50%)
+		}
+	}
+}
+
+.wrapper-full {
+	min-height: 100%;
+	&._loaded {
+	}
+	&._free {
+		.page-full__pagination {
+			transition: all 0.3s ease 0s;
+			transform: translate(100px, -50%);
+			opacity: 0;
+		}
 	}
 }
 //</WRAPPER>===========================================================================================================
@@ -82,6 +123,129 @@ body {
 //<MAIN BLOCK>====================================================================================================
 .page {
 	flex: 1 1 auto;
+}
+
+.page-full {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+
+	@media (max-width: $md2+px) {
+		position: relative;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+		color: #fff;
+	}
+
+	&__screen {
+		position: relative;
+		flex: 1 0 100%;
+
+
+	}
+
+	&__pagination {
+		position: fixed;
+		right: 0px;
+		top: 50%;
+		color: #fff;
+		transform: translate(0px, -50%);
+		display: flex;
+		flex-direction: column;
+		// opacity: 0;
+		// visibility: hidden;
+		transition: transform .6s ease .7s;
+
+		font-family: Quicksand;
+		font-size: 24px;
+		line-height: 1.2;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #d0bb79;
+	}
+
+	&__bullet {
+		cursor: pointer;
+		width: 30px;
+		height: 2px;
+		opacity: 0.8;
+		background-color: #454a53;
+		margin: 0px 0px 19px 0px;
+		transition: all .7s;
+	
+		&:last-child {
+			margin: 0;
+		}
+	
+		&--active {
+			width: 90px;
+			height: 3px;
+			background-color: #d0bb79;
+			border-radius: 1.5px;
+
+			@media (max-width: 1200px) {
+				width: 60px;
+			}
+		}
+	}
+
+
+	&:nth-child(odd){
+		background-color: #0d0f16;
+	}
+	&:nth-child(even){
+		background-color: #12141c;
+	}
+}
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	min-height: 800px;
+
+	@media (max-width: $md2+px) {
+		min-height: auto;
+		height: 100%;
+		padding: 100px 0px 40px 0px;
+	}
+
+	&__copyright {
+		position: absolute;
+		z-index: 1;
+		left: 90px;
+		bottom: 50px;
+
+		@media (max-width: $md2+px) {
+			display: none;
+		}
+	}
+	
+	&__socials {
+		position: absolute;
+		z-index: 1;
+		right: 90px;
+		bottom: 37px;
+
+		@media (max-width: $md2+px) {
+			display: flex;
+			justify-content: center;
+			left: 0;
+			bottom: 15px;
+			width: 100%;
+
+			display: none;
+		}
+
+	}
 }
 //===================================================================================================================================
 //</MAIN BLOCK>====================================================================================================

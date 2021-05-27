@@ -25,11 +25,28 @@
 	}
 }
 
- ._icon-headphones:before {
-	content: "\e910";
+._icon-chevron-left:before {
+	content: "\e906";
  }
- ._icon-music:before {
-	content: "\e911";
+ ._icon-chevron-right:before {
+	content: "\e900";
  }
-
+ ._icon-dribbble:before {
+	content: "\e901";
+ }
+ ._icon-instagram:before {
+	content: "\e902";
+ }
+ ._icon-twitter:before {
+	content: "\e903";
+ }
+ ._icon-facebook:before {
+	content: "\e904";
+ }
+ ._icon-facebook-f:before {
+	content: "\e904";
+ }
+ ._icon-search:before {
+	content: "\e905";
+ }
  
