@@ -61,6 +61,7 @@ $fontSize: 18;
 //<COMPONENTS>====================================================================================================
 @import "components/swiper";
 @import "components/popup";
+@import "components/accordion";
 //<COMPONENTS>====================================================================================================
 
 //<STYLES>====================================================================================================
@@ -125,7 +126,6 @@ body {
 .page {
 	flex: 1 1 auto;
 }
-
 .page-full {
 	position: fixed;
 	width: 100%;
@@ -249,6 +249,40 @@ body {
 }
 .bg-second{
 	background-color: #0d0f16;
+}
+.homepage-v5-title {
+	position: relative;
+	font-size: 36px;
+	line-height: 40px;
+	font-weight: 400;
+	letter-spacing: 0.01em;
+	color: #ffffff;
+	padding: 0px 0px 0px 40px;
+	margin: 0px 0px 90px 0px;
+
+	@media (max-width: $md2+px) {
+		margin: 0 0 50px 0;
+	}
+
+	@media (max-width: $md3+px) {
+		padding: 0 0 0 25px;
+		font-size: 23px;
+		line-height: 27px;
+		margin: 0px 0px 50px 0px;
+	}
+
+	@media (max-width: $md4+px) {
+		margin: 0px 0px 30px 0px;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 4px;
+		height: 100%;
+		background-color: #d0bb79;
+	}
 }
 //===================================================================================================================================
 //</MAIN BLOCK>====================================================================================================

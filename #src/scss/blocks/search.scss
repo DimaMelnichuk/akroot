@@ -59,6 +59,15 @@
 		width: 100%;
 		transition: border-bottom .3s;
 
+		@media (max-width: $md4+px) {
+			font-size: 22px;
+			padding: 0px 0px 20px 0px;
+		}
+
+		@media (max-width: 380px) {
+			font-size: 18px;
+		}
+
 		&._error {
 			border-bottom: 1px solid #9F3A33;
 		}
