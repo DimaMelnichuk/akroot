@@ -74,49 +74,73 @@
 .swiper-button-prev,
 .swiper-button-next {
 	position: absolute;
-	top: 50%;
-	transform: translate(0%, -50%);
-	background-color: red;
-	width: 45px;
-	height: 45px;
+	// top: 50%;
+	// transform: translate(0%, -50%);
 	border-radius: 100%;
-	color: #fff;
-	border: 2px solid;
 	cursor: pointer;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
 
-	&:hover {
-		@media (min-width: $md2+px) {
-			color: #019bad;
+.screen-4__slider-prev,
+.screen-4__slider-next {
+	top: 70%;
+	width: 60px;
+	height: 60px;
+	background-color: #13171f;
 
+	@media (max-width: $md2+px) {
+		bottom: 40px;
+		top: auto;
+	}
+
+	@media (min-width: $md2+px) {
+		&:hover {
 			&::after {
-				color: #019bad;
+				color: #d0bb79;
 			}
 		}
 	}
 
-	&::after,
 	&::after {
 		position: absolute;
 		font-family: "icons";
-		font-size: 18px;
+		font-size: 24px;
+		line-height: 1.2;
+		font-weight: 400;
+		color: #454a53;
+		transition: color .3s;
+
+		@media (max-width: $md2+px) {
+			color: #d0bb79;
+		}
 	}
+
 }
-.swiper-button-prev {
-	left: 0;
+.screen-4__slider-prev {
+	left: 90px;
+
+	@media (max-width: $md2+px) {
+		left: 10px;
+	}
 
 	&::after {
-		content: "\e911";
+		content: "\e906";
 	}
+	
 }
-.swiper-button-next {
-	right: 0;
+.screen-4__slider-next {
+	left: 200px;
+
+	@media (max-width: $md2+px) {
+		left: 100px;
+	}
 
 	&::after {
-		content: "\e910";
+		content: "\e900";
 	}
+
 }
 //<NUMBERS>====================================================================================================
 .swiper-pagination-fraction {

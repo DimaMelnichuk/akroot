@@ -1,12 +1,25 @@
-let info_icon = document.querySelector('.call');
-let info_list = document.querySelector('.call__body');
-info_icon.addEventListener("click", function (e) {
-	info_list.classList.toggle('_active');
-});
+let searchIcon = document.querySelector('.menu__search-icon');
+let search = document.querySelector('.search');
+let searchClose = document.querySelector('.search__close');
+let body = document.querySelector('body');
 
+if (searchIcon) {
+	searchIcon.addEventListener("click", function (e) {
+		let delay = 500;
+		body.classList.add('_lock');
+		search.classList.add('_active');
+	});
+	searchClose.addEventListener("click", function (e) {
+		search.classList.remove('_active');
+		body.classList.remove('_lock');
+	});
+}
 
-document.documentElement.addEventListener("click", function (e) {
-	if (!e.target.closest('.call')) {
-		info_list.classList.remove('_active');
+ document.documentElement.addEventListener("click", function (e) {
+	if (!e.target.closest('.search, .menu__search-icon')) {
+		search.classList.remove('_active');
+		body.classList.remove('_lock');
 	}
 });
+
+

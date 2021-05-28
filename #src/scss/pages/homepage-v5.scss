@@ -48,8 +48,14 @@
 		margin: 0px 0px 100px 0px;
 		max-width: 645px;
 
+		@media (max-width: 1500px) {
+			padding: 0px 60px 0px 0px;
+			max-width: 705px;
+		}
+
 		@media (max-width: $md2+px) {
 			text-align: center;
+			padding: 0px 15px;
 		}
 
 		@media (max-width: 700px) {
@@ -57,15 +63,22 @@
 		}
 
 		@media (max-width: 500px) {
-		
 			margin: 0px 0px 130px 0px;
 		}
 	}
 
 	&__icon {
-		height: 60px;
-		width: 36px;
-		background: url("../img/icons/mouse.png") no-repeat;
+		display: block;
+		color: #fff;
+		font-size: 60px;
+
+		@media (max-width: 1500px) {
+			padding: 0px 60px 0px 0px;
+		}
+
+		@media (max-width: $md2+px) {
+			padding: 0px 15px;
+		}
 	}
 
 }
@@ -213,5 +226,99 @@
 				height: 250px;
 			}
 		}
+	}
+}
+
+.screen-4 {
+	position: relative;
+
+	&__content {
+		
+		&.content {			
+			justify-content: flex-start;
+		}
+	}
+
+	&__slider {
+
+	}
+
+	&__row {
+		padding: 0px 0px 100px 0px;
+	}
+
+	&__title {
+		position: relative;
+		font-size: 36px;
+		line-height: 40px;
+		font-weight: 400;
+		letter-spacing: 0.01em;
+		color: #ffffff;
+		padding: 0px 0px 0px 40px;
+		margin: 0px 0px 90px 0px;
+
+		@media (max-width: $md2+px) {
+			margin: 0 0 50px 0;
+		}
+
+		@media (max-width: $md3+px) {
+			padding: 0 0 0 25px;
+			font-size: 23px;
+			line-height: 27px;
+			margin: 0px 0px 50px 0px;
+		}
+
+		@media (max-width: $md4+px) {
+			margin: 0px 0px 30px 0px;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			width: 4px;
+			height: 100%;
+			background-color: #d0bb79;
+		}
+	}
+
+	&__text {
+		font-family: 'Source Sans Pro';
+		font-size: 24px;
+		line-height: 36px;
+		color: #e5e5e5;
+		font-weight: 300;
+		margin: 0px 0px 40px 0px;
+		max-width: 780px;
+
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 30px 0px;
+		}
+
+		@media (max-width: $md4+px) {
+			font-size: 22px;
+			line-height: 34px;
+			max-width: 100%;
+		}
+
+		&-bold {
+			font-weight: 400;
+		}
+	}
+
+	&__author {
+		font-size: 18px;
+		font-weight: 700;
+		letter-spacing: 0.01em;
+		color: #ffffff;
+		margin: 0px 0px 15px 0px;
+	}
+
+	&__job {
+		font-size: 12px;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 0.25em;
+		color: #878787;
 	}
 }

@@ -76,6 +76,7 @@ $fontSize: 18;
 //blocks
 @import "blocks/copyright";
 @import "blocks/socials";
+@import "blocks/search";
 //</STYLES>====================================================================================================
 
 //<NULL, GENERAL PARAMETERS>===============================================================================================
@@ -148,8 +149,6 @@ body {
 	&__screen {
 		position: relative;
 		flex: 1 0 100%;
-
-
 	}
 
 	&__pagination {
@@ -197,13 +196,6 @@ body {
 		}
 	}
 
-
-	&:nth-child(odd){
-		background-color: #0d0f16;
-	}
-	&:nth-child(even){
-		background-color: #12141c;
-	}
 }
 .content {
 	display: flex;
@@ -216,6 +208,10 @@ body {
 		min-height: auto;
 		height: 100%;
 		padding: 100px 0px 40px 0px;
+	}
+
+	@media (max-width: $md3+px) {
+		padding: 40px 0px 40px 0px;
 	}
 
 	&__copyright {
@@ -246,6 +242,13 @@ body {
 		}
 
 	}
+}
+
+.bg-first{
+	background-color: #12141c;
+}
+.bg-second{
+	background-color: #0d0f16;
 }
 //===================================================================================================================================
 //</MAIN BLOCK>====================================================================================================

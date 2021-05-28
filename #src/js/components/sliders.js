@@ -1,3 +1,40 @@
+//BildSlider
+let sliders = document.querySelectorAll('._swiper');
+if (sliders) {
+	for (let index = 0; index < sliders.length; index++) {
+		let slider = sliders[index];
+		if (!slider.classList.contains('swiper-bild')) {
+			let slider_items = slider.children;
+			if (slider_items) {
+				for (let index = 0; index < slider_items.length; index++) {
+					let el = slider_items[index];
+					el.classList.add('swiper-slide');
+				}
+			}
+			let slider_content = slider.innerHTML;
+			let slider_wrapper = document.createElement('div');
+			slider_wrapper.classList.add('swiper-wrapper');
+			slider_wrapper.innerHTML = slider_content;
+			slider.innerHTML = '';
+			slider.appendChild(slider_wrapper);
+			slider.classList.add('swiper-bild');
+
+			if (slider.classList.contains('_swiper_scroll')) {
+				let sliderScroll = document.createElement('div');
+				sliderScroll.classList.add('swiper-scrollbar');
+				slider.appendChild(sliderScroll);
+			}
+		}
+		if (slider.classList.contains('_gallery')) {
+			//slider.data('lightGallery').destroy(true);
+		}
+	}
+	sliders_bild_callback();
+}
+
+function sliders_bild_callback(params) { }
+
+
 
 let pageSlider = new Swiper('.page-full', {
 	// Свои классы
@@ -40,7 +77,6 @@ let pageSlider = new Swiper('.page-full', {
 	// Отключение функционала
 	// если слайдов меньше чем нужно
 	watchOverflow: true,
-
 	// Скорость
 	speed: 700,
 
@@ -74,23 +110,31 @@ let pageSlider = new Swiper('.page-full', {
 	// События
 	on: {
 		// Событие инициализации
-		init: function (sw) {
+		init: function () {
 			menuSlider();
 			setScrollType();
 			wrapper.classList.add('_loaded');
-			
 		},
 		// Событие смены слайда
-		slideChange: function (sw) {
+		slideChange: function () {
 			menuSliderRemove();
 			menuLinks[pageSlider.realIndex].classList.add('_active');
-
 		},
 		resize: function () {
 			setScrollType();
 		}
 	},
 
+});
+
+let screen4Slider = new Swiper('.screen-4__slider', {
+	loop: true,
+	// effect: 'fade',
+
+	navigation: {
+		nextEl: '.screen-4__slider-next',
+		prevEl: '.screen-4__slider-prev',
+	 },
 });
 
 
@@ -138,7 +182,6 @@ function setScrollType() {
 		}
 	}
 }
-
 
 if (window.innerWidth >= 991.98) {
 	pageSlider.init();
