@@ -1,4 +1,5 @@
 // Определяем действующие элементы на странице
+let countdownItem = document.querySelector('.countdown');
 const days = document.querySelector('#days');
 const hours = document.querySelector('#hours');
 const minutes = document.querySelector('#minutes');
@@ -6,7 +7,7 @@ const seconds = document.querySelector('#seconds');
 const countdown = document.querySelector('#countdown');
 
 // Делаем расчеты
-const finishTime = new Date(`September 25 2020 00:00:00`);
+const finishTime = new Date(`September 25 2021 00:00:00`);
 
 
 function updateCounter() {
@@ -30,5 +31,7 @@ function updateCounter() {
 	seconds.innerText = secondsLeft < 10 ? '0' + secondsLeft : secondsLeft;
 }
 
-// Запускаем расчет 1 раз в секунду (каждую секунду)
-setInterval(updateCounter, 1000);
+if (countdownItem) {
+	setInterval(updateCounter, 1000);
+}
+

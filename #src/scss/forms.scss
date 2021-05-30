@@ -23,19 +23,20 @@
 //<BUTTONS>====================================================================================================
 .btn {
 	display: inline-flex;
-	padding: 0px 0px;
-
-	background-color: #d0bb79;
-	border-radius: 3px;
-	font-family: "Quicksand";
-	font-size: 16px;
+	border-radius: 3px; 
 	line-height: 1.2;
 	font-weight: 700;
 	letter-spacing: 0.01em;
+	transition: color .5s, background-color .5s;
+}
+.btn-primary {
+	font-size: 16px;
+	background-color: #d0bb79;
 	color: #0d0f16;
 
-	@media (min-width: 992px) {
+	@media (min-width: $md2+px) {
 		&:hover {
+			background-color: #8F7F4D;
 		}
 	}
 }
@@ -43,14 +44,9 @@
 	display: inline-flex;
 	border: 2px solid #d0bb79;
 	color: #d0bb79;
-	border-radius: 3px;
-	font-family: "Quicksand";
-	padding: 16px 67px;
 	font-size: 14px;
-	font-weight: 700;
-	transition: color .3s, background-color .3s;
 
-	@media (min-width: 850px) {
+	@media (min-width: $md2+px) {
 		&:hover {
 			background-color: #d0bb79;
 			color: #12141c;
@@ -76,15 +72,28 @@ textarea {
 	border-radius: 0 !important;
 	width: 100%;
 	display: block;
-	padding: 0px 20px;
+	padding: 17px 20px 17px 30px;
+
+	font-family: 'Source Sans Pro';
+	font-size: 18px;
+	font-weight: 400;
+	color: #878787;
+	border-radius: 3px;
+	border: 2px solid transparent;
+	background-color: transparent;
+	transition: all .5s;
 
 	&._focus {
+		border: 2px solid #d0bb79;
 	}
 	&._error {
+		border: 2px solid #9F3A33;
+		transition: all .5s;
 	}
 }
 textarea.input {
 	resize: none;
-	padding: 0px 0px;
+	padding: 25px 30px;
+
 }
 //</INPUT>====================================================================================================

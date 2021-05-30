@@ -4,3 +4,4 @@
 @@include('files/forms.js', {})
 @@include('components/sliders.js', {})
 @@include('components/modal.js', {})
+@@include('components/countdown.js', {})

@@ -183,8 +183,11 @@ function setScrollType() {
 	}
 }
 
-if (window.innerWidth >= 991.98) {
-	pageSlider.init();
-} else {
-	wrapper.classList.add("_loaded");
+if (wrapper) {
+	if (window.innerWidth >= 991.98) {
+		pageSlider.init();
+	} else {
+		wrapper.classList.add("_loaded");
+	}
 }
+

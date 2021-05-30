@@ -5,7 +5,6 @@ let body = document.querySelector('body');
 
 if (searchIcon) {
 	searchIcon.addEventListener("click", function (e) {
-		let delay = 500;
 		body.classList.add('_lock');
 		search.classList.add('_active');
 	});
@@ -13,13 +12,15 @@ if (searchIcon) {
 		search.classList.remove('_active');
 		body.classList.remove('_lock');
 	});
+
+	document.documentElement.addEventListener("click", function (e) {
+		if (!e.target.closest('.search, .menu__search-icon')) {
+			search.classList.remove('_active');
+			body.classList.remove('_lock');
+		}
+	});
 }
 
- document.documentElement.addEventListener("click", function (e) {
-	if (!e.target.closest('.search, .menu__search-icon')) {
-		search.classList.remove('_active');
-		body.classList.remove('_lock');
-	}
-});
+
 
 

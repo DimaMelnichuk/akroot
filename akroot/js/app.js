@@ -1216,7 +1216,7 @@ function inputs_init(inputs) {
 					//'+38(999) 999 9999'
 					//'+375(99)999-99-99'
 					input.classList.add('_mask');
-					Inputmask("+375 (99) 9999999", {
+					Inputmask("+380 (99) 9999999", {
 						//"placeholder": '',
 						clearIncomplete: true,
 						clearMaskOnLostFocus: true,
@@ -1457,11 +1457,14 @@ function setScrollType() {
 	}
 }
 
-if (window.innerWidth >= 991.98) {
-	pageSlider.init();
-} else {
-	wrapper.classList.add("_loaded");
+if (wrapper) {
+	if (window.innerWidth >= 991.98) {
+		pageSlider.init();
+	} else {
+		wrapper.classList.add("_loaded");
+	}
 }
+
 
 let searchIcon = document.querySelector('.menu__search-icon');
 let search = document.querySelector('.search');
@@ -1470,7 +1473,6 @@ let body = document.querySelector('body');
 
 if (searchIcon) {
 	searchIcon.addEventListener("click", function (e) {
-		let delay = 500;
 		body.classList.add('_lock');
 		search.classList.add('_active');
 	});
@@ -1478,13 +1480,53 @@ if (searchIcon) {
 		search.classList.remove('_active');
 		body.classList.remove('_lock');
 	});
+
+	document.documentElement.addEventListener("click", function (e) {
+		if (!e.target.closest('.search, .menu__search-icon')) {
+			search.classList.remove('_active');
+			body.classList.remove('_lock');
+		}
+	});
 }
 
- document.documentElement.addEventListener("click", function (e) {
-	if (!e.target.closest('.search, .menu__search-icon')) {
-		search.classList.remove('_active');
-		body.classList.remove('_lock');
-	}
-});
 
+
+
+
+// Определяем действующие элементы на странице
+let countdownItem = document.querySelector('.countdown');
+const days = document.querySelector('#days');
+const hours = document.querySelector('#hours');
+const minutes = document.querySelector('#minutes');
+const seconds = document.querySelector('#seconds');
+const countdown = document.querySelector('#countdown');
+
+// Делаем расчеты
+const finishTime = new Date(`September 25 2021 00:00:00`);
+
+
+function updateCounter() {
+	const currentTime = new Date();
+	const diff = finishTime - currentTime;
+
+	// Перевод в дни
+	const daysLeft = Math.floor(diff / 1000 / 60 / 60 / 24);
+	// Часов всего, далее остаток от деления на 24 (преобразования в дни), получаем 8 часов
+	const hoursLeft = Math.floor(diff / 1000 / 60 / 60) % 24;
+	// Минут всего, далее остаток от преобразования в часы, минут осталось
+	const minutesLeft = Math.floor(diff / 1000 / 60) % 60;
+	// Секундк всего, далее остаток от преобразования в минуты, секунд осталось
+	const secondsLeft = Math.floor(diff / 1000) % 60;
+
+	console.log(daysLeft, hoursLeft, minutesLeft, secondsLeft);
+
+	days.innerText = daysLeft;
+	hours.innerText = hoursLeft < 10 ? '0' + hoursLeft : hoursLeft;
+	minutes.innerText = minutesLeft < 10 ? '0' + minutesLeft : minutesLeft;
+	seconds.innerText = secondsLeft < 10 ? '0' + secondsLeft : secondsLeft;
+}
+
+if (countdownItem) {
+	setInterval(updateCounter, 1000);
+}
 
