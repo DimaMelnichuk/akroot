@@ -203,13 +203,13 @@
 
 		&:hover {
 			@media (min-width: $md3+px) {
-				color: #e0e22e;
+				color: #d0bb79;
 			}
 		}
 
 		// active menu on scroll
 		&._active {
-			color: aqua;
+			color: #d0bb79;
 		}
 	}
 
