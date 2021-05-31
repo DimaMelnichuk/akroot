@@ -1,0 +1,1 @@
+let mixer = mixitup('.page-portfolio__items');

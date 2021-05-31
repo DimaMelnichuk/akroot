@@ -63,29 +63,32 @@ $fontSize: 18;
 @import "components/accordion";
 @import "components/popup";
 @import "components/countdown";
+@import "components/breadcrumb";
 //<COMPONENTS>====================================================================================================
 
 //<STYLES>====================================================================================================
 @import "forms";
 @import "ui";
 @import "header";
+@import "header-full";
 @import "footer";
 @import "home";
 
 //pages
 @import "pages/homepage-v5";
 @import "pages/coming-soon";
+@import "pages/page-portfolio";
 
 //blocks
 @import "blocks/copyright";
 @import "blocks/socials";
 @import "blocks/search";
+@import "blocks/intro";
 //</STYLES>====================================================================================================
 
 //<NULL, GENERAL PARAMETERS>===============================================================================================
 @import "null";
 body {
-	
 	color: #000;
 	font-size: 14px;
 	&._lock {

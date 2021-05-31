@@ -1,6 +1,6 @@
 window.onscroll = function() {headerFixed()};
 var header = document.querySelector(".header");
-var headerContent = document.querySelector(".header__body");
+var headerContent = document.querySelector(".header__content");
 var sticky = headerContent.offsetTop;
 
 function headerFixed() {

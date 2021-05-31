@@ -9,12 +9,25 @@
 		white-space: nowrap;
 
 		li {
-			margin: 0px 10px 0px 0px;
-			padding: 0px 20px 0px 0px;
+			position: relative;
+			margin: 0px 15px 0px 0px;
+			padding: 0px 22px 0px 0px;
 			
 			&:last-child {
 				margin: 0;
 				padding: 0;
+
+				&::after {
+					content: "";
+					display: none;
+				}
+			}
+
+			&::after {
+				position: absolute;
+				right: 0;
+				content: "»";
+				color: #878787;
 			}
 		}
 	}
@@ -22,12 +35,24 @@
 	// .breadcrumb__link
 
 	&__link {
-		color: #EA4127FF;
+		font-size: 12px;
+		line-height: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.25em;
+		color: #878787;
+		transition: color .3s;
+
+		@media (min-width: $md2+px) {
+			&:hover {
+				color: #d0bb79;
+			}
+		}
 	}
 
 	// .breadcrumb__item
 
 	&__item {
-		color: #dddd;
+		color: #e5e5e5;
 	}
 }

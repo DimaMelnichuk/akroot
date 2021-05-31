@@ -17,7 +17,7 @@ function scroll_scroll() {
 	let src_value = currentScroll = pageYOffset;
 	let header = document.querySelector('header.header');
 	if (header !== null) {
-		if (src_value > 10) {
+		if (src_value > 0) {
 			header.classList.add('_scroll');
 		} else {
 			header.classList.remove('_scroll');

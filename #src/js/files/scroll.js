@@ -12,6 +12,13 @@ window.addEventListener('scroll', scroll_scroll);
 function scroll_scroll() {
 	let src_value = currentScroll = pageYOffset;
 	let header = document.querySelector('header.header');
+	if (header !== null) {
+		if (src_value > 0) {
+			header.classList.add('_scroll');
+		} else {
+			header.classList.remove('_scroll');
+		}
+	}
 	if (scr_items.length > 0) {
 		for (let index = 0; index < scr_items.length; index++) {
 			let scr_item = scr_items[index];

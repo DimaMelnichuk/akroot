@@ -1,12 +1,11 @@
 //====================================================================================================
-.header {
+.header-full {
 	position: fixed;
 	top: 0px;
 	left: 0px;
 	width: 100%;
 	z-index: 10;
-	background-color: transparent;
-	transition: background-color .3s;
+	background-color: #0c0f16;
 
 	&::before {
 		content: "";
@@ -15,19 +14,13 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: transparent;
+		background-color: #0c0f16;
 		z-index: 3;
-		transition: background-color .3s;
 	}
 
 	&._scroll {
-		background-color: #0c0f16;
 
-		&::before {
-			background-color: #0c0f16;
-		}
 	}
-	// .header__content
 
 	&__content {
 		position: relative;
@@ -36,9 +29,12 @@
 		align-items: center;
 		height: 80px;
 		transition: all .3s;
-	}
+		padding: 0px 90px;
 
-	// .header__logo
+		@media (max-width: $md2+px) {
+			padding: 0px 15px;
+		}
+	}
 
 	&__logo {
 		position: relative;
@@ -276,46 +272,6 @@
 
 }
  //====================================================================================================
-body._pc .menu__list .menu__item:hover .menu__sub-list {
-	visibility: visible;
-	opacity: 1;
-	pointer-events: all;
-	transform: translate(0px, 0px);
-}
-body._pc .menu__list .menu__item:hover .menu__link {
-	color: #e0e22e;
-}
-body._touch .menu__item {
-	display: flex;
-	align-items: center;
-}
-body._touch .menu__link {
-	flex: 1 1 auto;
-}
-body._touch .menu__arrow {
-	display: inline-block;
-	width: 0;
-	height: 0;
-	margin: 0px 0px 0px 5px;
-	border-top: 8px solid #fff;
-	border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
-	transition: transform .3s;
-}
-body._touch .menu__list .menu__item._active .menu__sub-list {
-	visibility: visible;
-	opacity: 1;
-	pointer-events: all;
-	transform: translate(0px, 0px);
-}
-body._touch .menu__list .menu__item._active .menu__arrow {
-	transform: rotate(-180deg);
-}
-// header sticky for header-fixed
-._fixed + .page{
-	padding: 70px 0px 0px 0px;
-}
-
 ._free {
 	.header {
 		background-color: #12141c;
