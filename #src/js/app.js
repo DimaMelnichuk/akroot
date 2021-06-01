@@ -5,3 +5,4 @@
 @@include('components/sliders.js', {})
 @@include('components/modal.js', {})
 @@include('components/countdown.js', {})
+@@include('components/menuIconClick.js', {})
