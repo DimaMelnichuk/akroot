@@ -1,0 +1,157 @@
+.page-pricing {
+
+	&__services {
+	}
+
+	&__prices {
+	}
+
+	&__testimonials {
+	}
+
+	&__free {
+	}
+}
+
+//========================================================================================================================================================
+
+.pricing-services {
+	padding: 110px 0px;
+
+	@media (max-width: $md1+px) {
+		padding: 100px 0px 100px;
+	}
+
+	@media (max-width: $md2+px) {
+		padding: 80px 0px 80px;
+	}
+
+	@media (max-width: $md3+px) {
+		padding: 60px 0px 60px;
+	}
+
+	@media (max-width: $md4+px) {
+		padding: 40px 0px 40px;
+	}
+
+	&__title {
+		margin: 0px 0px 35px 0px;
+
+		@media (max-width: $md2+px) {
+			margin: 0 0 30px 0;
+		}
+
+		@media (max-width: $md3+px) {
+			margin: 0 0 25px 0;
+		}
+
+		@media (max-width: $md4+px) {
+			margin: 0 0 20px 0;
+		}
+	}
+
+	&__text {
+		font-family: 'Source Sans Pro';
+		font-size: 18px;
+		line-height: 30px;
+		font-weight: 400;
+		color: #878787;
+		text-align: center;
+		max-width: 770px;
+		margin: 0 auto 120px;
+
+		@media (max-width: $md1+px) {
+			margin: 0 auto 100px;
+		}
+		@media (max-width: $md2+px) {
+			margin: 0 auto 80px;
+		}
+		@media (max-width: $md3+px) {
+			margin: 0 auto 60px;
+		}
+		@media (max-width: $md4+px) {
+			margin: 0 auto 40px;
+		}
+	}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: -70px;
+
+		@media (max-width: $md1+px) {
+			margin: -50px;
+		}
+		@media (max-width: $md2+px) {
+			margin: -25px;
+		}
+		@media (max-width: $md4+px) {
+			margin: -15px;
+		}
+	}
+
+	&__column {
+		flex: 0 1 33.333%;
+		padding: 70px;
+
+		@media (max-width: $md1+px) {
+			padding: 50px;
+		}
+
+		@media (max-width: $md2+px) {
+			padding: 25px;
+		}
+		@media (max-width: $md3+px) {
+			flex: 0 1 50%;
+		}
+		@media (max-width: $md4+px) {
+			flex: 0 1 100%;
+			padding: 15px;
+		}
+	}
+
+	&__item {
+		text-align: center;
+	}
+
+	&__item-icon {
+		font-size: 48px;
+		color: #fff;
+		margin: 0px 0px 50px 0px;
+
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 40px 0px;
+		}
+
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 30px 0px;
+		}
+
+		@media (max-width: $md4+px) {
+			margin: 0px 0px 20px 0px;
+		}
+	}
+
+	&__item-title {
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 700;
+		letter-spacing: 0.01em;
+		color: #ffffff;
+		margin: 0px 0px 20px 0px;
+
+		@media (max-width: $md4+px) {
+			margin: 0px 0px 15px 0px;
+		}
+	}
+
+	&__item-text {
+		font-family: 'Source Sans Pro';
+		font-size: 18px;
+		line-height: 30px;
+		font-weight: 400;
+		color: #878787;
+	}
+}
+

@@ -15,11 +15,29 @@
 		visibility: visible;
 	}
 
+	&__container {
+
+		&--full {
+			padding: 0px 90px;
+
+			@media (max-width: $md3+px) {
+				padding: 0px 10px;
+			}
+		}
+	}
+
 	&__header {
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
-		padding: 32px 0px 0px 0px;
+
+		&--bg {
+			height: 120px;
+		}
+
+		&--sm {
+			height: 80px;
+		}
 	}
 
 	&__close {
@@ -75,6 +93,10 @@
 		top: 0%;
 		cursor: pointer;
 	}
-
-
+}
+//========================================================================================================================================================
+._scroll {
+	.search__header--bg {
+		height: 80px;
+	}
 }

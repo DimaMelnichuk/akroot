@@ -70,7 +70,7 @@ $fontSize: 18;
 @import "forms";
 @import "ui";
 @import "header";
-// @import "header-full";
+@import "header-full";
 @import "footer";
 @import "home";
 
@@ -78,12 +78,15 @@ $fontSize: 18;
 @import "pages/homepage-v5";
 @import "pages/coming-soon";
 @import "pages/page-portfolio";
+@import "pages/page-portfolio-detail";
+@import "pages/page-pricing";
 
 //blocks
 @import "blocks/copyright";
 @import "blocks/socials";
 @import "blocks/search";
 @import "blocks/intro";
+@import "blocks/overlay";
 //</STYLES>====================================================================================================
 
 //<NULL, GENERAL PARAMETERS>===============================================================================================
@@ -130,6 +133,27 @@ body {
 //<MAIN BLOCK>====================================================================================================
 .page {
 	flex: 1 1 auto;
+
+	&__bg {
+		background-color: #0d0f16;
+		padding: 110px 0px 110px;
+
+		@media (max-width: $md1+px) {
+			padding: 100px 0px 100px;
+		}
+	
+		@media (max-width: $md2+px) {
+			padding: 80px 0px 80px;
+		}
+	
+		@media (max-width: $md3+px) {
+			padding: 60px 0px 60px;
+		}
+	
+		@media (max-width: $md4+px) {
+			padding: 40px 0px 40px;
+		}
+	}
 }
 .page-full {
 	position: fixed;
@@ -241,5 +265,42 @@ body {
 
 	}
 }
+.bg-first{
+	background-color: #12141c;
+}
+.bg-second{
+	background-color: #0d0f16;
+}
+.page-title {
+	position: relative;
+	font-size: 36px;
+	line-height: 50px;
+	font-weight: 400;
+	letter-spacing: 0.01em;
+	color: #ffffff;
+	padding: 0px 0px 32px 0px;
+	text-align: center;
+
+	@media (max-width: $md4+px) {
+		font-size: 26px;
+		line-height: 40px;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, 0%);
+		bottom: 0;
+		width: 12px;
+		height: 10px;
+		background: url("../img/icons/arrow_down__orange.png") 0 0 no-repeat;
+	}
+
+	span {
+		font-weight: 700;
+	}
+}
+
 //===================================================================================================================================
 //</MAIN BLOCK>====================================================================================================

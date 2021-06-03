@@ -1,26 +1,6 @@
 //====================================================================================================
 .header-full {
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	z-index: 10;
-	background-color: #0c0f16;
 
-	&::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: #0c0f16;
-		z-index: 3;
-	}
-
-	&._scroll {
-
-	}
 
 	&__content {
 		position: relative;
@@ -44,9 +24,50 @@
 }
 //====================================================================================================
 
-.menu {
+.menu-full {
 	display: flex;
 	align-items: center;
+
+	&__icon {
+		//Burger
+		&.icon-menu {
+			display: block;
+			position: relative;
+			width: 30px;
+			height: 18px;
+			cursor: pointer;
+			z-index: 3;
+			span {
+				transition: all 0.3s ease 0s;
+				top: calc(50% - 1px);
+				left: 0px;
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				background-color: #fff;
+				&:first-child {
+					top: 0px;
+				}
+				&:last-child {
+					top: auto;
+					bottom: 0px;
+				}
+			}
+			&._active {
+				span {
+					transform: scale(0);
+					&:first-child {
+						transform: rotate(-45deg);
+						top: calc(50% - 1px);
+					}
+					&:last-child {
+						transform: rotate(45deg);
+						bottom: calc(50% - 1px);
+					}
+				}
+			}
+		}
+	}
 
 	&__contact {
 		position: relative;
@@ -112,13 +133,7 @@
 			}
 		}
 
-		@media (max-width: 850px) {
-			margin: 0px 25px 0px 0px;
-		}
 
-		@media (max-width: 380px) {
-			margin: 0px 20px 0px 0px;
-		}
 	}
 
 	&__body {
@@ -282,41 +297,3 @@
 	}
 }
 //====================================================================================================
-//Burger
-.icon-menu {
-	display: block;
-	position: relative;
-	width: 30px;
-	height: 18px;
-	cursor: pointer;
-	z-index: 3;
-	span {
-		transition: all 0.3s ease 0s;
-		top: calc(50% - 1px);
-		left: 0px;
-		position: absolute;
-		width: 100%;
-		height: 2px;
-		background-color: #fff;
-		&:first-child {
-			top: 0px;
-		}
-		&:last-child {
-			top: auto;
-			bottom: 0px;
-		}
-	}
-	&._active {
-		span {
-			transform: scale(0);
-			&:first-child {
-				transform: rotate(-45deg);
-				top: calc(50% - 1px);
-			}
-			&:last-child {
-				transform: rotate(45deg);
-				bottom: calc(50% - 1px);
-			}
-		}
-	}
-}

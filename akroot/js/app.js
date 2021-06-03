@@ -1320,11 +1320,8 @@ if (sliders) {
 	}
 	sliders_bild_callback();
 }
-
 function sliders_bild_callback(params) { }
-
-
-
+//========================================================================================================================================================
 let pageSlider = new Swiper('.page-full', {
 	// Свои классы
 	wrapperClass: "page-full__wrapper",
@@ -1426,9 +1423,31 @@ let screen4Slider = new Swiper('.screen-4__slider', {
 	 },
 });
 
+let productDetail = new Swiper('.product-detail__slider', {
+	loop: true,
+	slidesPerView: 1,
+
+	// effect: 'fade',
+	// thumbs
+	thumbs: {
+		swiper: {
+			el: '.product-detail__thumbs',
+			slidesPerView: 3,
+			direction: 'horizontal',
+			spaceBetween: 30,
+
+			breakpoints: {
+				768: {
+					direction: 'vertical',
+				},
+			},
+		}
+	},
+});
+
 
 let wrapper = document.querySelector(".wrapper-full");
-let menuLinks = document.querySelectorAll('.menu__link');
+let menuLinks = document.querySelectorAll('.menu__link--full');
 
 function menuSlider() {
 	if (menuLinks.length > 0) {
@@ -1446,7 +1465,7 @@ function menuSlider() {
 }
 
 function menuSliderRemove() {
-	let menuLinkActive = document.querySelector('.menu__link._active');
+	let menuLinkActive = document.querySelector('.menu__link--full._active');
 	if (menuLinkActive) {
 		menuLinkActive.classList.remove('_active');
 	}

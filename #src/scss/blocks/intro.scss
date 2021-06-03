@@ -46,6 +46,11 @@
 			line-height: 55px;
 			margin: 0 0 15px 0
 		}
+
+		@media (max-width: 380px) {
+			font-size: 30px;
+			line-height: 45px;
+		}
 	}
 
 }
