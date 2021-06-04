@@ -34,7 +34,7 @@
 				</div>
 			</div>
 			<div class="page-pricing">
-				<div class="bg-second page-pricing__services pricing-services">
+				<div class="page-padding bg-second page-pricing__services pricing-services">
 					<div class="_container">
 						<div class="pricing-services__title page-title">Our services are <span>Integrated Together</span></div>
 						<div class="pricing-services__text">Sed sollicitudin ligula mi, ut accumsan est dapibus a. Cras pharetra dolor gravida, mattis tellus at, dapibus velit. Aenean dictum enim a augue aliquet posuere eget quis nibh. Morbi sed sapien et ante tincidunt vulputate sit amet eu odio. Aenean congue id metus id efficitur.</div>
@@ -63,9 +63,88 @@
 						</div>
 					</div>
 				</div>
-				<div class="bg-first page-pricing__prices pricing-prices"></div>
-				<div class="bg-second page-pricing__testimonials pricing-testimonials"></div>
-				<div class="bg-first page-pricing__free pricing-free"></div>
+				<div class="page-padding page-pricing__prices pricing-prices">
+					<div class="_container">
+						<div class="pricing-prices__title page-title">Check our incredible <span>Prices</span></div>
+						<div class="pricing-prices__row">
+							<div class="pricing-prices__column">
+								<div class="pricing-prices__item">
+									<div class="pricing-prices__name">Plan Basic</div>
+									<div class="pricing-prices__price">79<span>usd</span></div>
+									<div class="pricing-prices__text">Vehicula quam accumsan. Curabitur rhoncus sem vestibulum quam sollicitudin varius.</div>
+									<a href="#" class="pricing-prices__btn btn btn-outline">Continued Read</a>
+								</div>
+							</div>
+							<div class="pricing-prices__column">
+								<div class="pricing-prices__item">
+									<div class="pricing-prices__popular">Popular</div>
+									<div class="pricing-prices__name">Plan Business</div>
+									<div class="pricing-prices__price">99<span>usd</span></div>
+									<div class="pricing-prices__text">Vehicula quam accumsan. Curabitur rhoncus sem vestibulum quam sollicitudin varius. Lorem ipsum dolor sit amet.</div>
+									<a href="#" class="pricing-prices__btn btn btn-outline">Continued Read</a>
+								</div>
+							</div>
+							<div class="pricing-prices__column">
+								<div class="pricing-prices__item">
+									<div class="pricing-prices__name">Plan Enterprise</div>
+									<div class="pricing-prices__price">299<span>usd</span></div>
+									<div class="pricing-prices__text">Vehicula quam accumsan. Curabitur rhoncus sem vestibulum quam sollicitudin varius.</div>
+									<a href="#" class="pricing-prices__btn btn btn-outline">Continued Read</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="page-padding bg-second page-pricing__testimonials pricing-testimonials">
+					<div class="_container">
+						<div class="pricing-testimonials__title page-title">What do Akroot customers <span>Say?</span></div>
+						<div class="pricing-testimonials__slider _swiper">
+							<div class="pricing-testimonials__slider-item testimonials-item">
+								<div class="testimonials-item__text">Ipsum curae curabitur dapibus non netus dolor ante ut laoreet, turpis faucibus sodales euismod conubia taciti quisque vestibulum, vitae adipiscing bibendum himenaeos loportis dictum etiam.</div>
+								<div class="testimonials-item__row">
+									<img class="testimonials-item__img" src="img/homepage-v5/test.jpg" alt="">
+									<div class="testimonials-item__info">
+										<div class="testimonials-item__info-name">Luiza Pavardenis</div>
+										<div class="testimonials-item__info-job">Cofunder of Akroot</div>
+									</div>
+								</div>
+							</div>
+							<div class="pricing-testimonials__slider-item testimonials-item">
+								<div class="testimonials-item__text">Ipsum curae curabitur dapibus non netus dolor ante ut laoreet, turpis faucibus sodales euismod conubia taciti quisque vestibulum, vitae adipiscing bibendum himenaeos loportis dictum etiam.</div>
+								<div class="testimonials-item__row">
+									<img class="testimonials-item__img" src="img/homepage-v5/test.jpg" alt="">
+									<div class="testimonials-item__info">
+										<div class="testimonials-item__info-name">Luiza Pavardenis</div>
+										<div class="testimonials-item__info-job">Cofunder of Akroot</div>
+									</div>
+								</div>
+							</div>
+							<div class="pricing-testimonials__slider-item testimonials-item">
+								<div class="testimonials-item__text">Ipsum curae curabitur dapibus non netus dolor ante ut laoreet, turpis faucibus sodales euismod conubia taciti quisque vestibulum, vitae adipiscing bibendum himenaeos loportis dictum etiam.</div>
+								<div class="testimonials-item__row">
+									<img class="testimonials-item__img" src="img/homepage-v5/test.jpg" alt="">
+									<div class="testimonials-item__info">
+										<div class="testimonials-item__info-name">Luiza Pavardenis</div>
+										<div class="testimonials-item__info-job">Cofunder of Akroot</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pricing-testimonials__slider-pagination swiper-pagination"></div>
+					</div>
+				</div>
+				<div class="page-padding bg-first page-pricing__free pricing-free">
+					<div class="_container">
+						<div class="pricing-free__title page-title">Start your <span>Free Trial</span></div>
+						<div class="pricing-free__text">Eligible applicants get all our services for a period of 14 days completely free then start with the bread chosen.<span>You can cancel at any time!</span></div>
+						<form class="pricing-free__form" action="#">
+							<div class="pricing-free__line">
+								<input autocomplete="off" type="text" name="form[email]" data-value="Enter your email" data-error="" class="pricing-free__input input _req _email">
+								<button type="submit" class="pricing-free__btn btn btn-primary">Start now</button>
+							</div>
+						</form>
+					</div>
+				</div>
 			</div>
 		</main>
 		@@include('_footer.html',{})

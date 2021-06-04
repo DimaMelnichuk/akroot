@@ -1,3 +1,4 @@
+//========================================================================================================================================================
 .page-pricing {
 
 	&__services {
@@ -12,41 +13,14 @@
 	&__free {
 	}
 }
-
 //========================================================================================================================================================
-
 .pricing-services {
-	padding: 110px 0px;
-
-	@media (max-width: $md1+px) {
-		padding: 100px 0px 100px;
-	}
-
-	@media (max-width: $md2+px) {
-		padding: 80px 0px 80px;
-	}
-
-	@media (max-width: $md3+px) {
-		padding: 60px 0px 60px;
-	}
-
-	@media (max-width: $md4+px) {
-		padding: 40px 0px 40px;
-	}
 
 	&__title {
 		margin: 0px 0px 35px 0px;
 
 		@media (max-width: $md2+px) {
 			margin: 0 0 30px 0;
-		}
-
-		@media (max-width: $md3+px) {
-			margin: 0 0 25px 0;
-		}
-
-		@media (max-width: $md4+px) {
-			margin: 0 0 20px 0;
 		}
 	}
 
@@ -154,4 +128,348 @@
 		color: #878787;
 	}
 }
+//========================================================================================================================================================
+.pricing-prices {
+	background-color: #171921;
 
+	&__title {
+		margin: 0px 0px 74px 0px;
+
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 64px 0px;
+		}
+
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 54px 0px;
+		}
+
+		@media (max-width: $md4+px) {
+			margin: 0px 0px 40px 0px;
+		}
+	}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: -15px;
+
+		@media (max-width: $md3+px) {
+			margin: -7.5px;
+		}
+	}
+
+	&__column {
+		flex: 0 1 33.333%;
+		padding: 15px;
+
+		@media (max-width: $md2+px) {
+			flex: 0 1 50%;
+		}
+
+		@media (max-width: 600px) {
+			flex: 0 1 100%;
+			padding: 7.5px;
+		}
+	}
+	
+	&__item {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		overflow: hidden;
+		height: 100%;
+		padding: 60px 55px;
+		background-color: #12141C;
+		transition: background-color .3s;
+
+		@media (min-width: $md2+px) {
+			&:hover {
+				background-color: #0d0f16;
+
+				.pricing-prices__popular {
+					opacity: 1;
+				}
+			}
+		}
+
+		@media (max-width: $md1+px) {
+			padding: 40px 45px;
+		}
+
+		@media (max-width: $md2+px) {
+			padding: 30px 15px;
+		}
+	}
+
+	&__popular {
+		position: absolute;
+		text-align: center;
+		top: 12px;
+		left: -45px;
+		width: 150px;
+		height: 30px;
+		line-height: 30px;
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: 0.01em;
+		color: #0d0f16;
+		background-color: #08e5a1;
+		transform: rotate(-39deg);
+		opacity: 0;
+		transition: all .3s;
+
+		@media (max-width: $md2+px) {
+			opacity: 1;
+		}
+	}
+
+	&__name {
+		font-size: 18px;
+		font-weight: 700;
+		letter-spacing: 0.01em;
+		color: #ffffff;
+		margin: 0px 0px 30px 0px;
+	}
+
+	&__price {
+		position: relative;
+		font-size: 36px;
+		font-weight: 400;
+		letter-spacing: 0.01em;
+		color: #ffffff;
+		margin: 0px 0px 25px 0px;
+		padding: 0px 0px 0px 15px;
+
+		&::before {
+			content: "$";
+			position: absolute;
+			left: 0;
+			top: 3px;
+			font-size: 14px;
+			font-weight: 400;
+			letter-spacing: 0.01em;
+			color: #878787;
+		}
+
+		span {
+			font-size: 14px;
+			font-weight: 400;
+			letter-spacing: 0.01em;
+			color: #878787;
+			padding: 0px 0px 0px 0px;
+		}
+	}
+
+	&__text {
+		font-family: 'Source Sans Pro';
+		font-size: 18px;
+		line-height: 30px;
+		font-weight: 400;
+		color: #878787;
+		flex: 1 1 auto;
+		margin: 0px 0px 50px 0px;
+	}
+
+	&__btn {
+		padding: 16px 53px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@media (max-width: $md1+px) {
+			padding: 16px 43px;
+		}
+	}
+}
+//========================================================================================================================================================
+.pricing-testimonials {
+
+	&__title {
+		margin: 0px 0px 74px 0px;
+
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 64px 0px;
+		}
+
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 54px 0px;
+		}
+
+		@media (max-width: $md4+px) {
+			margin: 0px 0px 40px 0px;
+		}
+	}
+
+	&__slider {
+		position: relative;
+		padding: 0px 0px 86px 0px;
+
+		@media (max-width: $md1+px) {
+			padding: 0px 0px 70px 0px;
+		}
+
+		@media (max-width: $md2+px) {
+			padding: 0px 0px 60px 0px;
+		}
+
+		@media (max-width: $md4+px) {
+			padding: 0 0 40px 0;
+		}
+	}
+
+	&__slider-item {
+		cursor: pointer;
+		background-color: #12141c;
+		padding: 62px 45px;
+
+		@media (max-width: $md2+px) {
+			padding: 42px 25px;
+		}
+
+		@media (max-width: $md4+px) {
+			padding: 20px;
+		}
+	}
+}
+.testimonials-item {
+
+	&__text {
+		font-family: 'Source Sans Pro';
+		font-size: 20px;
+		line-height: 32px;
+		font-weight: 300;
+		color: #aaaaaa;
+		margin: 0px 0px 45px 0px;
+
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 35px 0px;
+		}
+
+		@media (max-width: $md4+px) {
+			margin: 0px 0px 25px 0px;
+		}
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+	}
+
+	&__img {
+		width: 70px;
+		height: 70px;
+		border: 3px solid #d0bb79;
+		border-radius: 100%;
+		object-fit: cover;
+		margin: 0px 30px 0px 0px;
+
+		@media (max-width: $md4+px) {
+			margin: 0 20px 0 0;
+		}
+	}
+
+	&__info {
+	}
+
+	&__info-name {
+		font-size: 18px;
+		font-weight: 700;
+		letter-spacing: 0.01em;
+		color: #ffffff;
+		margin: 0px 0px 6px 0px;
+	}
+
+	&__info-job {
+		font-family: 'Source Sans Pro';
+		font-size: 16px;
+		line-height: 1.2;
+		font-weight: 400;
+		color: #878787;
+	}
+}
+//========================================================================================================================================================
+.pricing-free {
+
+	&__title {
+		margin: 0px 0px 30px 0px;
+	}
+
+	&__text {
+		font-family: 'Source Sans Pro';
+		font-size: 18px;
+		line-height: 30px;
+		font-weight: 400;
+		color: #878787;
+		text-align: center;
+		max-width: 770px;
+		margin: 0 auto 50px;
+
+		@media (max-width: $md1+px) {
+			margin: 0 auto 50px;
+		}
+		@media (max-width: $md2+px) {
+			margin: 0 auto 50px;
+		}
+		@media (max-width: $md3+px) {
+			margin: 0 auto 50px;
+		}
+		@media (max-width: $md4+px) {
+			margin: 0 auto 40px;
+		}
+		
+		span {
+			color: #dcdcdc;
+		}
+			
+	}
+
+	&__line {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+
+		@media (max-width: $md3+px) {
+			flex-wrap: wrap;
+			flex-direction: column;
+			align-items: center;
+
+		}
+		
+		@media (max-width: $md4+px) {
+
+		}
+	}
+
+	&__input {
+		max-width: 370px;
+		min-height: 60px;
+		border: 2px solid #1D212D;
+		margin: 0px 30px 0px 0px;
+
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 30px 0px;
+		}
+		@media (max-width: $md4+px) {
+			margin: 0px 0px 15px 0px;
+		}
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 60px;
+		width: 270px;
+		white-space: nowrap;
+		font-weight: 700;
+
+		@media (max-width: $md4+px) {
+			max-width: 370px;
+			width: 100%;
+		}
+	}
+}
+//========================================================================================================================================================

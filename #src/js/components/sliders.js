@@ -156,6 +156,25 @@ let productDetail = new Swiper('.product-detail__slider', {
 	},
 });
 
+let testimonials = new Swiper('.pricing-testimonials__slider', {
+	loop: true,
+	slidesPerView: 1,
+	spaceBetween: 30,
+	autoHeight: true,
+	
+	pagination: {
+		el: '.swiper-pagination',
+		type: 'bullets',
+		clickable: true,
+	},
+	
+ 	breakpoints: {
+		670: {
+			slidesPerView: 2,
+		}
+	 } 
+
+});
 
 let wrapper = document.querySelector(".wrapper-full");
 let menuLinks = document.querySelectorAll('.menu__link--full');
