@@ -80,7 +80,7 @@ textarea {
 	font-weight: 400;
 	color: #878787;
 	border-radius: 3px;
-	border: 2px solid transparent;
+	border: 2px solid #141720;
 	background-color: transparent;
 	transition: all .5s;
 
@@ -95,6 +95,6 @@ textarea {
 textarea.input {
 	resize: none;
 	padding: 25px 30px;
-
+	height: 103px;
 }
 //</INPUT>====================================================================================================
