@@ -312,6 +312,14 @@
 
 	&__item {
 		margin: 0px 0px 20px 0px;
+		transform: translateX(0px);
+		transition: transform .5s;
+
+		@media (min-width: $md2+px) {
+			&:hover {
+				transform: translateX(10px);
+			}
+		}
 
 		&:last-child {
 			margin: 0;
@@ -323,11 +331,13 @@
 		font-weight: 700;
 		letter-spacing: 0.01em;
 		color: #878787;
-		transition: color .3s;
+		transform: translateY(0px);
+		transition: color .3s, transform .3s;
 		
 		@media (min-width: $md2+px) {
 			&:hover {
 				color: #ffffff;
+				
 			}
 		}
 	}

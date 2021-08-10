@@ -177,7 +177,7 @@ let testimonials = new Swiper('.pricing-testimonials__slider', {
 });
 
 let wrapper = document.querySelector(".wrapper-full");
-let menuLinks = document.querySelectorAll('.menu__link--full');
+let menuLinks = document.querySelectorAll('.menu__link--full-goto');
 
 function menuSlider() {
 	if (menuLinks.length > 0) {
@@ -195,7 +195,7 @@ function menuSlider() {
 }
 
 function menuSliderRemove() {
-	let menuLinkActive = document.querySelector('.menu__link--full._active');
+	let menuLinkActive = document.querySelector('.menu__link--full-goto._active');
 	if (menuLinkActive) {
 		menuLinkActive.classList.remove('_active');
 	}

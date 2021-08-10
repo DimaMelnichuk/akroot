@@ -55,7 +55,7 @@ $fontSize: 18;
 //</MAIN GRID>===========================================================================================================
 
 //<LIBS>====================================================================================================
-//@import "libs/nouislider";
+@import "libs/simplebar";
 //<LIBS>====================================================================================================
 
 //<COMPONENTS>====================================================================================================
@@ -72,7 +72,6 @@ $fontSize: 18;
 @import "forms";
 @import "ui";
 @import "header";
-@import "header-full";
 @import "footer";
 @import "home";
 
@@ -84,6 +83,7 @@ $fontSize: 18;
 @import "pages/page-pricing";
 @import "pages/page-news-v1";
 @import "pages/page-news-v2";
+@import "pages/page-services";
 @import "pages/contact";
 
 //blocks
@@ -92,6 +92,7 @@ $fontSize: 18;
 @import "blocks/search";
 @import "blocks/intro";
 @import "blocks/overlay";
+@import "blocks/services";
 //</STYLES>====================================================================================================
 
 //<NULL, GENERAL PARAMETERS>===============================================================================================
@@ -328,3 +329,20 @@ body {
 }
 //===================================================================================================================================
 //</MAIN BLOCK>====================================================================================================
+
+.simplebar-scrollbar::before {
+	background: #D0BB7A;
+	border-radius: 10px;
+	width: 10px;
+}
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.simplebar-track.simplebar-vertical {
+	background: #20222E;
+	border-radius: 10px;
+	width: 10px;
+}

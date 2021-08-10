@@ -54,6 +54,31 @@
 		}
 	}
 }
+.btn-icon {
+	position: relative;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.01em;
+	color: #d0bb79;
+	padding: 0px 15px 0px 0px;
+	transition: color .3s;
+
+	@media (min-width: $md2+px) {
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	&::after {
+		content: "\e900";
+		font-family: "icons";
+		position: absolute;
+		font-size: 9px;
+		right: 0;
+		top: 50%;
+		transform: translate(0%, -50%);
+	}
+}
 //</BUTTONS>====================================================================================================
 
 //<INPUT>====================================================================================================
